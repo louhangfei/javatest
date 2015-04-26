@@ -1,0 +1,37 @@
+class Computer
+{
+	public void run()
+	{
+		System.out.println("电脑运行");
+	}
+	public void reset()
+	{
+	System.out.println("电脑重启");
+	}
+}
+
+class Teacher
+{ 
+	private String name;
+	private Computer cmpt;
+	Teacher (String name)
+	{
+		this.name=name;
+		cmpt=new Computer();
+	}
+	
+	public void prelect()
+	{
+		cmpt.run();
+		System.out.println("讲课");
+	}
+}
+
+class exceptiontest
+{
+		public static void main(String[] args)
+	{
+			Teacher t=new Teacher("毕老师");
+			t.prelect();
+	}
+}
